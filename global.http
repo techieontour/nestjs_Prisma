@@ -1,0 +1,27 @@
+@hrms_HostAddress = http://localhost:3000
+
+GET {{hrms_HostAddress}}/articles
+###
+GET  {{hrms_HostAddress}}/articles/drafts
+###
+POST {{hrms_HostAddress}}/articles
+Content-Type: application/json
+
+{
+    "title": "Blue corraco",
+    "description": "Waent Best Wiks",
+    "body": "Braber Senort",
+    "published": false
+}
+###
+PATCH {{hrms_HostAddress}}/articles/1
+Content-Type: application/json
+
+{
+    "title": "Blue corracssdds",
+    "description": "Waent Best Wiks",
+    "body": "Braber Senort",
+    "published": false
+}
+###
+DELETE {{hrms_HostAddress}}/articles/1
